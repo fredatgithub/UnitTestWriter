@@ -38,6 +38,7 @@
       this.enregistrersousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
       this.aperçuavantimpressionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
       this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.annulerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +54,11 @@
       this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.àproposdeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+      this.buttonWrite = new System.Windows.Forms.Button();
+      this.textBoxSource = new System.Windows.Forms.TextBox();
+      this.textBoxUnitTests = new System.Windows.Forms.TextBox();
+      this.labelSource = new System.Windows.Forms.Label();
+      this.labelResult = new System.Windows.Forms.Label();
       this.menuStripMain.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -67,7 +72,8 @@
             this.aideToolStripMenuItem});
       this.menuStripMain.Location = new System.Drawing.Point(0, 0);
       this.menuStripMain.Name = "menuStripMain";
-      this.menuStripMain.Size = new System.Drawing.Size(800, 28);
+      this.menuStripMain.Padding = new System.Windows.Forms.Padding(12, 3, 0, 3);
+      this.menuStripMain.Size = new System.Drawing.Size(1911, 30);
       this.menuStripMain.TabIndex = 0;
       this.menuStripMain.Text = "menuStrip1";
       // 
@@ -137,6 +143,11 @@
       this.aperçuavantimpressionToolStripMenuItem.Name = "aperçuavantimpressionToolStripMenuItem";
       this.aperçuavantimpressionToolStripMenuItem.Size = new System.Drawing.Size(255, 26);
       this.aperçuavantimpressionToolStripMenuItem.Text = "Aperçu a&vant impression";
+      // 
+      // toolStripSeparator2
+      // 
+      this.toolStripSeparator2.Name = "toolStripSeparator2";
+      this.toolStripSeparator2.Size = new System.Drawing.Size(252, 6);
       // 
       // quitterToolStripMenuItem
       // 
@@ -229,13 +240,13 @@
       // personnaliserToolStripMenuItem
       // 
       this.personnaliserToolStripMenuItem.Name = "personnaliserToolStripMenuItem";
-      this.personnaliserToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+      this.personnaliserToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
       this.personnaliserToolStripMenuItem.Text = "&Personnaliser";
       // 
       // optionsToolStripMenuItem
       // 
       this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-      this.optionsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+      this.optionsToolStripMenuItem.Size = new System.Drawing.Size(178, 26);
       this.optionsToolStripMenuItem.Text = "&Options";
       // 
       // aideToolStripMenuItem
@@ -253,18 +264,68 @@
       this.àproposdeToolStripMenuItem.Text = "À &propos de...";
       this.àproposdeToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
       // 
-      // toolStripSeparator2
+      // buttonWrite
       // 
-      this.toolStripSeparator2.Name = "toolStripSeparator2";
-      this.toolStripSeparator2.Size = new System.Drawing.Size(252, 6);
+      this.buttonWrite.Location = new System.Drawing.Point(584, 82);
+      this.buttonWrite.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+      this.buttonWrite.Name = "buttonWrite";
+      this.buttonWrite.Size = new System.Drawing.Size(112, 36);
+      this.buttonWrite.TabIndex = 1;
+      this.buttonWrite.Text = "Create";
+      this.buttonWrite.UseVisualStyleBackColor = true;
+      // 
+      // textBoxSource
+      // 
+      this.textBoxSource.Location = new System.Drawing.Point(38, 85);
+      this.textBoxSource.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+      this.textBoxSource.Multiline = true;
+      this.textBoxSource.Name = "textBoxSource";
+      this.textBoxSource.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+      this.textBoxSource.Size = new System.Drawing.Size(509, 540);
+      this.textBoxSource.TabIndex = 2;
+      // 
+      // textBoxUnitTests
+      // 
+      this.textBoxUnitTests.Location = new System.Drawing.Point(745, 85);
+      this.textBoxUnitTests.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+      this.textBoxUnitTests.Multiline = true;
+      this.textBoxUnitTests.Name = "textBoxUnitTests";
+      this.textBoxUnitTests.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+      this.textBoxUnitTests.Size = new System.Drawing.Size(509, 540);
+      this.textBoxUnitTests.TabIndex = 3;
+      // 
+      // labelSource
+      // 
+      this.labelSource.AutoSize = true;
+      this.labelSource.Location = new System.Drawing.Point(33, 40);
+      this.labelSource.Name = "labelSource";
+      this.labelSource.Size = new System.Drawing.Size(225, 25);
+      this.labelSource.TabIndex = 4;
+      this.labelSource.Text = "Paste your method here:";
+      // 
+      // labelResult
+      // 
+      this.labelResult.AutoSize = true;
+      this.labelResult.Location = new System.Drawing.Point(740, 40);
+      this.labelResult.Name = "labelResult";
+      this.labelResult.Size = new System.Drawing.Size(98, 25);
+      this.labelResult.TabIndex = 5;
+      this.labelResult.Text = "Unit tests:";
       // 
       // FormMain
       // 
-      this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+      this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(800, 450);
+      this.ClientSize = new System.Drawing.Size(1911, 1039);
+      this.Controls.Add(this.labelResult);
+      this.Controls.Add(this.labelSource);
+      this.Controls.Add(this.textBoxUnitTests);
+      this.Controls.Add(this.textBoxSource);
+      this.Controls.Add(this.buttonWrite);
       this.Controls.Add(this.menuStripMain);
+      this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.MainMenuStrip = this.menuStripMain;
+      this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
       this.Name = "FormMain";
       this.Text = "Unit test writer";
       this.Load += new System.EventHandler(this.FormMain_Load);
@@ -302,6 +363,11 @@
     private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem àproposdeToolStripMenuItem;
     private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+    private System.Windows.Forms.Button buttonWrite;
+    private System.Windows.Forms.TextBox textBoxSource;
+    private System.Windows.Forms.TextBox textBoxUnitTests;
+    private System.Windows.Forms.Label labelSource;
+    private System.Windows.Forms.Label labelResult;
   }
 }
 
