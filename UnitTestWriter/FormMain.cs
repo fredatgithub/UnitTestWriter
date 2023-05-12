@@ -21,5 +21,15 @@ namespace UnitTestWriter
     {
 
     }
+
+    private void QuitterToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      Application.Exit();
+    }
+
+    private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+
+    }
   }
 }
