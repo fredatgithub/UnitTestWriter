@@ -29,7 +29,8 @@ namespace UnitTestWriter
 
     private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
     {
-
+      AboutBoxApplication aboutBoxApplication = new AboutBoxApplication();
+      aboutBoxApplication.ShowDialog();
     }
   }
 }

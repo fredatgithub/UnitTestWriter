@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
 [assembly: AssemblyTitle("UnitTestWriter")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Let AI write my unit tests")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Capgemini")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("UnitTestWriter")]
-[assembly: AssemblyCopyright("Copyright © Capgemini 2023")]
+[assembly: AssemblyCopyright("Copyright © MIT Freddy Juhel 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
