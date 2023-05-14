@@ -260,7 +260,7 @@
       // àproposdeToolStripMenuItem
       // 
       this.àproposdeToolStripMenuItem.Name = "àproposdeToolStripMenuItem";
-      this.àproposdeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+      this.àproposdeToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
       this.àproposdeToolStripMenuItem.Text = "À &propos de...";
       this.àproposdeToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
       // 
@@ -273,6 +273,7 @@
       this.buttonWrite.TabIndex = 1;
       this.buttonWrite.Text = "Create";
       this.buttonWrite.UseVisualStyleBackColor = true;
+      this.buttonWrite.Click += new System.EventHandler(this.ButtonWrite_Click);
       // 
       // textBoxSource
       // 

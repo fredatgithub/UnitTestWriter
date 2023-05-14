@@ -32,5 +32,10 @@ namespace UnitTestWriter
       AboutBoxApplication aboutBoxApplication = new AboutBoxApplication();
       _ = aboutBoxApplication.ShowDialog();
     }
+
+    private void ButtonWrite_Click(object sender, EventArgs e)
+    {
+
+    }
   }
 }
