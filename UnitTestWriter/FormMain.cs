@@ -35,6 +35,12 @@ namespace UnitTestWriter
 
     private void ButtonWrite_Click(object sender, EventArgs e)
     {
+      if (textBoxSource.Text == string.Empty)
+      {
+        MessageBox.Show("You have to paste a base method", "No Method", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+        return;
+      }
+
 
     }
   }
