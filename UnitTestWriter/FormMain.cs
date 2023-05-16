@@ -41,6 +41,7 @@ namespace UnitTestWriter
         return;
       }
 
+      textBoxUnitTests.Text = string.Empty;
 
     }
   }
