@@ -284,6 +284,7 @@
       this.textBoxSource.ScrollBars = System.Windows.Forms.ScrollBars.Both;
       this.textBoxSource.Size = new System.Drawing.Size(509, 540);
       this.textBoxSource.TabIndex = 2;
+      this.textBoxSource.Text = "public static string Plural(int number, string irregularNoun = \"\")";
       // 
       // textBoxUnitTests
       // 
