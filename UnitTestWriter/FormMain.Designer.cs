@@ -49,6 +49,9 @@
       this.collerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
       this.sélectionnertoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+      this.frenchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.outilsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.personnaliserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,6 +71,7 @@
       this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
             this.editionToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.outilsToolStripMenuItem,
             this.aideToolStripMenuItem});
       this.menuStripMain.Location = new System.Drawing.Point(0, 0);
@@ -154,7 +158,7 @@
       this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
       this.quitterToolStripMenuItem.Size = new System.Drawing.Size(255, 26);
       this.quitterToolStripMenuItem.Text = "&Quitter";
-      this.quitterToolStripMenuItem.Click += new System.EventHandler(this.QuitterToolStripMenuItem_Click);
+      this.quitterToolStripMenuItem.Click += new System.EventHandler(this.QuitToolStripMenuItem_Click);
       // 
       // editionToolStripMenuItem
       // 
@@ -227,6 +231,29 @@
       this.sélectionnertoutToolStripMenuItem.Name = "sélectionnertoutToolStripMenuItem";
       this.sélectionnertoutToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
       this.sélectionnertoutToolStripMenuItem.Text = "Sélectio&nner tout";
+      // 
+      // toolStripMenuItem1
+      // 
+      this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.frenchToolStripMenuItem,
+            this.englishToolStripMenuItem});
+      this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+      this.toolStripMenuItem1.Size = new System.Drawing.Size(88, 24);
+      this.toolStripMenuItem1.Text = "Language";
+      // 
+      // frenchToolStripMenuItem
+      // 
+      this.frenchToolStripMenuItem.Name = "frenchToolStripMenuItem";
+      this.frenchToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+      this.frenchToolStripMenuItem.Text = "French";
+      this.frenchToolStripMenuItem.Click += new System.EventHandler(this.FrenchToolStripMenuItem_Click);
+      // 
+      // englishToolStripMenuItem
+      // 
+      this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+      this.englishToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+      this.englishToolStripMenuItem.Text = "English";
+      this.englishToolStripMenuItem.Click += new System.EventHandler(this.EnglishToolStripMenuItem_Click);
       // 
       // outilsToolStripMenuItem
       // 
@@ -370,6 +397,9 @@
     private System.Windows.Forms.TextBox textBoxUnitTests;
     private System.Windows.Forms.Label labelSource;
     private System.Windows.Forms.Label labelResult;
+    private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+    private System.Windows.Forms.ToolStripMenuItem frenchToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
   }
 }
 
