@@ -61,7 +61,11 @@ namespace UnitTestWriter
       var method = new MethodSignature(lines[0]);
       method.SetModifier();
       method.SetStatic();
+      method.SetName();
+      method.SetReturnType();
 
+      // creation of unit tests
+      var oneUnitTest = new UnitTest();
 
     }
 

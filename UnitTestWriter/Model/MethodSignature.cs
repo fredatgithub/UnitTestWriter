@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UnitTestWriter.Model
 {
   public class MethodSignature
   {
+    public string Name { get; set; } = string.Empty;
     public string MethodSig { get; set; } = string.Empty;
     public string Modifier { get; set; } = string.Empty;
     public bool IsStatic { get; set; } = false;
@@ -64,5 +61,38 @@ namespace UnitTestWriter.Model
       }
     }
 
+    public void SetName()
+    {
+      if (MethodSig == string.Empty)
+      {
+        NumberOfArguments = 0;
+        return;
+      }
+
+      var arguments = MethodSig.Split('(');
+      var name = arguments[0].Split(' ');
+      Name = name[name.Length - 1];
+    }
+
+    public void SetNumberOfArguments()
+    {
+      if (MethodSig == string.Empty)
+      {
+        NumberOfArguments = 0;
+        return;
+      }
+
+      var arguments = MethodSig.Split('(');
+      var argumentList = arguments[1].Split(' ');
+
+    }
+
+    public void SetReturnType()
+    {
+      var arguments = MethodSig.Split('(');
+      var name = arguments[0].Split(' ');
+      var returnType = name[name.Length - 2];
+      ReturnType = Helper.GetType(returnType);
+    }
   }
 }

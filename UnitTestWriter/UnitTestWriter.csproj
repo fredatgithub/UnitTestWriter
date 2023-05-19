@@ -62,6 +62,7 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="Model\MethodSignature.cs" />
     <Compile Include="Model\UnitTest.cs" />
     <Compile Include="Program.cs" />
