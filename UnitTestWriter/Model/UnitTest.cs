@@ -10,7 +10,7 @@ namespace UnitTestWriter.Model
     public UnitTest()
     {
       Method = "[TestMethod]" + Environment.NewLine;
-      Method += "public void TestMethod";
+      Method += "public void TestMethod" + Environment.NewLine;
       Method += "{" + Environment.NewLine;
       Method += "var source = " + Environment.NewLine;
     }

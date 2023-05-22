@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace UnitTestWriter.Model
 {
@@ -10,6 +11,9 @@ namespace UnitTestWriter.Model
     public bool IsStatic { get; set; } = false;
     public Type ReturnType { get; set; }
     public int NumberOfArguments { get; set; } = 0;
+    public List<Type> ListOfArgumentsType { get; set; } = new List<Type>();
+    public List<string> ListOfArgumentsName { get; set; } = new List<string>();
+
     public MethodSignature()
     {
       MethodSig = string.Empty;
@@ -84,7 +88,11 @@ namespace UnitTestWriter.Model
 
       var arguments = MethodSig.Split('(');
       var argumentList = arguments[1].Split(' ');
-
+      if (argumentList.Length % 2 == 0)
+      {
+        NumberOfArguments = argumentList.Length / 2;
+        return;
+      }
     }
 
     public void SetReturnType()
@@ -93,6 +101,27 @@ namespace UnitTestWriter.Model
       var name = arguments[0].Split(' ');
       var returnType = name[name.Length - 2];
       ReturnType = Helper.GetType(returnType);
+    }
+
+    public void SetArgumentsType()
+    {
+      
+    }
+
+    public void SetArgumentNames()
+    {
+      if (MethodSig == string.Empty)
+      {
+        NumberOfArguments = 0;
+        return;
+      }
+
+      var arguments = MethodSig.Split('(');
+      var names = arguments[1].Split(' ');
+      var firstArgumentTypeString = names[0];
+      var firstArgumentType = Helper.GetType(firstArgumentTypeString);
+      ListOfArgumentsName.Add(firstArgumentTypeString.ToString());
+      ListOfArgumentsType.Add(firstArgumentType);
     }
   }
 }

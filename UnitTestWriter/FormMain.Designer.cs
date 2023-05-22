@@ -244,14 +244,14 @@
       // frenchToolStripMenuItem
       // 
       this.frenchToolStripMenuItem.Name = "frenchToolStripMenuItem";
-      this.frenchToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+      this.frenchToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
       this.frenchToolStripMenuItem.Text = "French";
       this.frenchToolStripMenuItem.Click += new System.EventHandler(this.FrenchToolStripMenuItem_Click);
       // 
       // englishToolStripMenuItem
       // 
       this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-      this.englishToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+      this.englishToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
       this.englishToolStripMenuItem.Text = "English";
       this.englishToolStripMenuItem.Click += new System.EventHandler(this.EnglishToolStripMenuItem_Click);
       // 
@@ -311,7 +311,7 @@
       this.textBoxSource.ScrollBars = System.Windows.Forms.ScrollBars.Both;
       this.textBoxSource.Size = new System.Drawing.Size(509, 540);
       this.textBoxSource.TabIndex = 2;
-      this.textBoxSource.Text = "public static string Plural(int number, string irregularNoun = \"\")";
+      this.textBoxSource.Text = "public static bool IsPrime (int number)";
       // 
       // textBoxUnitTests
       // 

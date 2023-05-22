@@ -63,10 +63,60 @@ namespace UnitTestWriter
       method.SetStatic();
       method.SetName();
       method.SetReturnType();
-
+      method.SetNumberOfArguments();
+      method.SetArgumentNames();
       // creation of unit tests
       var oneUnitTest = new UnitTest();
+      //oneUnitTest.AddUnitTestName(method.Name);
+      oneUnitTest.Method +=
 
+      textBoxUnitTests.Text = oneUnitTest.Method;
+    }
+
+    public List<T> GetSample<T>(string type)
+    {
+      switch (type)
+      {
+        case "string":
+          var stringSamples = new Sample<string>();
+          return stringSamples.GetSamples();
+        case "bool":
+          return GetBools();
+        case "int":
+          return GetInts();
+        case "long":
+          return GetLongs();
+        default: return null;
+      }
+    }
+
+    public static List<T> GetSamples<T>()
+    {
+      return new List<T>();
+    }
+
+    public static List<string> GetStrings()
+    {
+      return new List<string> {
+      "", "a", "b", "ab", "abc", "a long long time ago in a galaxy far far away"};
+    }
+
+    public static List<int> GetInts()
+    {
+      return new List<int> { -1, 0, 1, 2, 3, 4, 5, 6, 7 };
+    }
+
+    public static List<long> GetLongs()
+    {
+      return new List<long>
+      {
+        123456, long.MaxValue, long.MinValue
+      };
+    }
+
+    public static List<bool> GetBools()
+    {
+      return new List<bool> { true, false };
     }
 
     public static string GetVersion()

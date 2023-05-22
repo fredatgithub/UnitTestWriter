@@ -64,6 +64,7 @@
     </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="Model\MethodSignature.cs" />
+    <Compile Include="Model\Sample.cs" />
     <Compile Include="Model\UnitTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
