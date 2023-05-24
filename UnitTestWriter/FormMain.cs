@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.Remoting.Messaging;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using UnitTestWriter.Enums;
@@ -73,22 +74,22 @@ namespace UnitTestWriter
       textBoxUnitTests.Text = oneUnitTest.Method;
     }
 
-    public List<T> GetSample<T>(string type)
-    {
-      switch (type)
-      {
-        case "string":
-          var stringSamples = new Sample<string>();
-          return stringSamples.GetSamples();
-        case "bool":
-          return GetBools();
-        case "int":
-          return GetInts();
-        case "long":
-          return GetLongs();
-        default: return null;
-      }
-    }
+    //public List<T> GetSample<T>(string type)
+    //{
+    //  switch (type)
+    //  {
+    //    //case "string":
+    //    //  var stringSamples = new Sample<string>();
+    //    //  return stringSamples.GetSamples();
+    //    //case "bool":
+    //    //  return GetBools();
+    //    //case "int":
+    //    //  return GetInts();
+    //    //case "long":
+    //    //  return GetLongs();
+    //    //default: return null;
+    //  }
+    //}
 
     public static List<T> GetSamples<T>()
     {
