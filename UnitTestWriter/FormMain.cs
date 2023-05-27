@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.Remoting.Messaging;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using UnitTestWriter.Enums;
@@ -20,8 +19,8 @@ namespace UnitTestWriter
       InitializeComponent();
     }
 
-    readonly Dictionary<string, string> languageDicoEn = new Dictionary<string, string>();
-    readonly Dictionary<string, string> languageDicoFr = new Dictionary<string, string>();
+    private readonly Dictionary<string, string> languageDicoEn = new Dictionary<string, string>();
+    private readonly Dictionary<string, string> languageDicoFr = new Dictionary<string, string>();
 
 
     private void FormMain_Load(object sender, EventArgs e)
